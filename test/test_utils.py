@@ -13,3 +13,4 @@ class TestUtilsMethods(unittest.TestCase):
         self.assertEqual(utils.compute_vat_vd('901025526'), '9')
         self.assertEqual(utils.compute_vat_vd('901250040'), '5')
         self.assertEqual(utils.compute_vat_vd('900952931'), '1')
+        self.assertEqual(utils.compute_vat_vd('123456'), '1')

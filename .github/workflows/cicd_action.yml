@@ -11,9 +11,10 @@ name: Upload Python Package
 on:
   pull_request:
   push: 
-    - main
-    - master
-    - develop
+    branches:
+      - main
+      - master
+      - develop
 
 jobs:
   test:

@@ -185,3 +185,26 @@ TypeDebitNote = {
 }
 
 
+# 13.2.4. Concepto de Corrección para Notas crédito: cac:DiscrepancyResponse/cbc:ResponseCode
+# Código de Concepto de Corrección para Notas crédito
+
+ConceptCreditNote = {
+    '1': '1   Devolución parcial de los bienes y/o no aceptación parcial del servicio  ',
+    '2': '2   Anulación de factura electrónica  ',
+    '3': '3   Rebaja  o descuento parcial o total  ',
+    '4': '4   Ajuste de precio  ',
+    '5': '5   Otros  ',
+}
+
+
+# 13.2.5. Concepto de Corrección para Notas débito: cac:DiscrepancyResponse/cbc:ResponseCode 
+# Código de Concepto de Corrección para Notas débito
+
+ConceptDebitNote = {
+    '1': '1 Intereses',
+    '2': '2 Gastos por cobrar',
+    '3': '3 Cambio del valor',
+    '4': '4 Otros',
+}
+
+

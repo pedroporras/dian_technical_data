@@ -167,6 +167,13 @@ HealthOperationType = {
     'SS‐SinAporte': 'SS‐SinAporte',
 }
 
+# 13.1.5.2. Documento CreditNote – Nota Crédito
+# Código de Tipo de Documento para Nota Crédito
+
+TypeCreditNote = {
+    '20': 'Nota Crédito que referencia una factura electrónica',
+    '21': 'Nota Crédito sin referencia a facturas*.',
+}
 
 
 

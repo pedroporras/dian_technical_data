@@ -154,7 +154,18 @@ DocumentType = {
 }
 
 
+# 13.1.5.1.1. Tipos de operación Salud 
+# Código de Tipo de Operación para salud
 
+HealthOperationType = {
+    'SS‐CUFE': 'SS‐CUFE',
+    'SS‐CUDE': 'SS‐CUDE',
+    'SS‐POS': 'SS‐POS',
+    'SS‐SNum': 'SS‐SNum',
+    'SS‐Recaudo': 'SS‐Recaudo',
+    'SS‐Reporte': 'SS‐Reporte',
+    'SS‐SinAporte': 'SS‐SinAporte',
+}
 
 
 

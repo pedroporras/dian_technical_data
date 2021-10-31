@@ -132,3 +132,10 @@ Responsability = {
     'O-47': 'O-47 Régimen simple de tributación,',
     'R-99-PN': 'R-99-PN No aplica – Otros *',
 }
+
+# Tipos de operacion
+OperationType = {
+    '10': '10 - Estandar',
+    '09': '09 - AIU',
+    '11': '11 Mandatos',
+}

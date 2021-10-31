@@ -122,3 +122,13 @@ TaxTypeCode = {
 'ZA': 'ZA - IVA e INC',
 'ZZ (*)': 'ZZ (*) - No aplica',
 }
+
+# 13.2.17. Responsabilidad fiscal 
+# Código de Responsabilidad fiscal
+Responsability = {
+    'O-13': 'O-13 Gran contribuyente',
+    'O-15': 'O-15 Autorretenedor',
+    'O-23': 'O-23 Agente de retención IVA',
+    'O-47': 'O-47 Régimen simple de tributación,',
+    'R-99-PN': 'R-99-PN No aplica – Otros *',
+}

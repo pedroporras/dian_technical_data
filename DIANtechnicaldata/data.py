@@ -132,3 +132,79 @@ Responsability = {
     'O-47': 'O-47 Régimen simple de tributación,',
     'R-99-PN': 'R-99-PN No aplica – Otros *',
 }
+
+# Tipos de operacion
+OperationType = {
+    '10': '10 - Estandar',
+    '09': '09 - AIU',
+    '11': '11 Mandatos',
+}
+
+# 13.1.3. Tipo de Documento
+# Código de Tipo de Documento
+
+DocumentType = {
+'01': '01 Factura electrónica de Venta',
+'02': '02 Factura electrónica de venta ‐exportación',
+'03': '03 Instrumento electrónico de transmisión – tipo 03 Transcripción de la factura de talonrio o papel',
+'04': '04 Factura electrónica de Venta ‐ tipo 04',
+'91': '91 Nota Crédito Exclusivo en referencias a documentos (elementos DocumentReference)',
+'92': '92 Nota Débito (elementos DocumentReference)',
+'96': '96 Eventos (ApplicationResponse)',
+}
+
+
+# 13.1.5.1.1. Tipos de operación Salud 
+# Código de Tipo de Operación para salud
+
+HealthOperationType = {
+    'SS‐CUFE': 'SS‐CUFE',
+    'SS‐CUDE': 'SS‐CUDE',
+    'SS‐POS': 'SS‐POS',
+    'SS‐SNum': 'SS‐SNum',
+    'SS‐Recaudo': 'SS‐Recaudo',
+    'SS‐Reporte': 'SS‐Reporte',
+    'SS‐SinAporte': 'SS‐SinAporte',
+}
+
+# 13.1.5.2. Documento CreditNote – Nota Crédito
+# Código de Tipo de Documento para Nota Crédito
+
+TypeCreditNote = {
+    '20': 'Nota Crédito que referencia una factura electrónica',
+    '21': 'Nota Crédito sin referencia a facturas*.',
+}
+
+
+# 13.1.5.3. Documento DebitNote – Nota Débito
+# Código de Tipo de Documento para Nota Débito
+
+TypeDebitNote = {
+    '30': 'Nota Débito que referencia una factura electrónica',
+    '32': 'Nota Débito sin referencia a facturas*.',
+}
+
+
+# 13.2.4. Concepto de Corrección para Notas crédito: cac:DiscrepancyResponse/cbc:ResponseCode
+# Código de Concepto de Corrección para Notas crédito
+
+ConceptCreditNote = {
+    '1': '1   Devolución parcial de los bienes y/o no aceptación parcial del servicio  ',
+    '2': '2   Anulación de factura electrónica  ',
+    '3': '3   Rebaja  o descuento parcial o total  ',
+    '4': '4   Ajuste de precio  ',
+    '5': '5   Otros  ',
+}
+
+
+# 13.2.5. Concepto de Corrección para Notas débito: cac:DiscrepancyResponse/cbc:ResponseCode 
+# Código de Concepto de Corrección para Notas débito
+
+ConceptDebitNote = {
+    '1': '1 Intereses',
+    '2': '2 Gastos por cobrar',
+    '3': '3 Cambio del valor',
+    '4': '4 Otros',
+}
+
+

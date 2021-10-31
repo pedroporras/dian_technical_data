@@ -139,3 +139,23 @@ OperationType = {
     '09': '09 - AIU',
     '11': '11 Mandatos',
 }
+
+# 13.1.3. Tipo de Documento
+# Código de Tipo de Documento
+
+DocumentType = {
+'01': '01 Factura electrónica de Venta',
+'02': '02 Factura electrónica de venta ‐exportación',
+'03': '03 Instrumento electrónico de transmisión – tipo 03 Transcripción de la factura de talonrio o papel',
+'04': '04 Factura electrónica de Venta ‐ tipo 04',
+'91': '91 Nota Crédito Exclusivo en referencias a documentos (elementos DocumentReference)',
+'92': '92 Nota Débito (elementos DocumentReference)',
+'96': '96 Eventos (ApplicationResponse)',
+}
+
+
+
+
+
+
+

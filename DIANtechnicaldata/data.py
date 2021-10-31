@@ -176,4 +176,12 @@ TypeCreditNote = {
 }
 
 
+# 13.1.5.3. Documento DebitNote – Nota Débito
+# Código de Tipo de Documento para Nota Débito
+
+TypeDebitNote = {
+    '30': 'Nota Débito que referencia una factura electrónica',
+    '32': 'Nota Débito sin referencia a facturas*.',
+}
+
 

@@ -4,4 +4,4 @@ services:
     image: python:3-alpine
     command: python3 -m http.server 8080
     volumes:
-      - .:/dian_techincal_data
+      - .:/dian_technical_data

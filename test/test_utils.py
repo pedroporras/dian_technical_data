@@ -1,5 +1,5 @@
 import unittest
-from DIANtechnicaldata import utils
+from Docedian import utils
 
 class TestUtilsMethods(unittest.TestCase):
 

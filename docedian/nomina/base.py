@@ -187,3 +187,20 @@ Porcentaje = [
         'porcentaje': 110.00
     },
 ]
+
+# 5.5.6 Tipo de Incapacidad
+
+Tipo = [
+    {
+        'codigo': '1',
+        'descripcion': 'Comun',
+    },
+    {
+        'codigo': '2',
+        'descripcion': 'Profesional',
+    },
+    {
+        'codigo': '3',
+        'descripcion': 'Laboral'
+    },
+]

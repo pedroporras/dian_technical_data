@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import codecs
 import os
 
-VERSION = '0.1.4.1'
+VERSION = '0.1.4.2'
 DESCRIPTION = 'Modulo con definiciones de la DIAN'
 
 PACKAGE_NAME = "docedian"
@@ -20,7 +20,7 @@ setup(
     author='Pedro Porras',
     author_email='<pedroporras@inexpresivo.com>',
     keywords=['DIAN', 'Colombia'],
-    license='LGPL',
+    license='MIT',
     packages=find_packages(),
     install_requires = [],
     extras_require = {

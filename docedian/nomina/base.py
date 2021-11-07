@@ -106,3 +106,24 @@ TipoContrato = {
   '4': '4 - Aprendizaje',
   '5': '5 - Practicas o Pasantias',
 }
+
+# 5.5.3 Tipo de Trabajador
+
+TipoTrabajador = {
+    '01': '01 Dependiente',
+    '02': '02 Servicio domestico',
+    '04': '04 Madre comunitaria',
+    '12': '12 Aprendices del Sena en etapa lectiva',
+    '18': '18 Funcionarios públicos sin tope máximo de ibc',
+    '19': '19 Aprendices del SENA en etapa productiva',
+    '21': '21 Estudiantes de postgrado en salud',
+    '22': '22 Profesor de establecimiento particular',
+    '23': '23 Estudiantes aportes solo riesgos laborales',
+    '30': '30 Dependiente entidades o universidades públicas con régimen especial en salud',
+    '31': '31 Cooperados o pre cooperativas de trabajo asociado',
+    '47': '47 Trabajador dependiente de entidad beneficiaria del sistema general de participaciones ‐ aportes patronales',
+    '51': '51 Trabajador de tiempo parcial',
+    '54': '54 Pre pensionado de entidad en liquidación.',
+    '56': '56 Pre pensionado con aporte voluntario a salud',
+    '58': '58 Estudiantes de prácticas laborales en el sector público',
+}

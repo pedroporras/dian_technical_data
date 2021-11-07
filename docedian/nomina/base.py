@@ -86,5 +86,149 @@ MedioPago = {
     "39": "39 Crédito Negocio Intercambio Corporativo (CTX) ZZZ Acuerdo mutuo",
 }
 
+# 5.5.1 Periodo de Nomina
 
+PeriodoNomina = {
+  '1': '1 - Semanal',
+  '2': '2 - Decenal',
+  '3': '3- Catorcenal',
+  '4': '4 - Quincenal',
+  '5': '5 - Mensual',
+  '6': '6 - Otro',
+}
 
+# 5.5.2 Tipo de contrato
+
+TipoContrato = {
+  '1': '1 - Termino fijo',
+  '2': '2 - Termino Indefinido',
+  '3': '3 - Obra o Labor',
+  '4': '4 - Aprendizaje',
+  '5': '5 - Practicas o Pasantias',
+}
+
+# 5.5.3 Tipo de Trabajador
+
+TipoTrabajador = {
+    '01': '01 Dependiente',
+    '02': '02 Servicio domestico',
+    '04': '04 Madre comunitaria',
+    '12': '12 Aprendices del Sena en etapa lectiva',
+    '18': '18 Funcionarios públicos sin tope máximo de ibc',
+    '19': '19 Aprendices del SENA en etapa productiva',
+    '21': '21 Estudiantes de postgrado en salud',
+    '22': '22 Profesor de establecimiento particular',
+    '23': '23 Estudiantes aportes solo riesgos laborales',
+    '30': '30 Dependiente entidades o universidades públicas con régimen especial en salud',
+    '31': '31 Cooperados o pre cooperativas de trabajo asociado',
+    '47': '47 Trabajador dependiente de entidad beneficiaria del sistema general de participaciones ‐ aportes patronales',
+    '51': '51 Trabajador de tiempo parcial',
+    '54': '54 Pre pensionado de entidad en liquidación.',
+    '56': '56 Pre pensionado con aporte voluntario a salud',
+    '58': '58 Estudiantes de prácticas laborales en el sector público',
+}
+
+# 5.5.4 Subtipo de Trabajador
+
+SubTipoTrabajador = {
+   '00': 'No Aplica',
+   '01': 'Dependiente pensionado por vejez activo',
+}
+
+# 5.5.5 Tipo de Hora Extra o Recargo
+
+Porcentaje = [
+    # 1 Hora Extra Diurna 25.00
+    {
+        'codigo': '1',
+        'tipo': 'Hora Extra Diurna',
+        'porcentaje': 25.00
+    },
+
+    # 2 Hora Extra Nocturna 75.00
+    {
+        'codigo': '2',
+        'tipo': 'Hora Extra Nocturna',
+        'porcentaje': 75.00
+    },
+
+    # 3 Hora Recargo Nocturno 35.00
+    {
+        'codigo': '3',
+        'tipo': 'Hora Recargo Nocturno',
+        'porcentaje': 35.00
+    },
+
+    # 4 Hora Extra Diurna Dominical y Festivos 100.00
+    {
+        'codigo': '4',
+        'tipo': 'Hora Extra Diurna Dominical y Festivos',
+        'porcentaje': 100.00
+    },
+
+    # 5 Hora Recargo Diurno Dominical y Festivos 75.00
+    {
+        'codigo': '5',
+        'tipo': 'Hora Recargo Diurno Dominical y Festivos',
+        'porcentaje': 75.00
+    },
+
+    # 6 Hora Extra Nocturna Dominical y Festivos 150.00
+    {
+        'codigo': '6',
+        'tipo': 'Hora Extra Nocturna Dominical y Festivos',
+        'porcentaje': 150.00
+    },
+
+    # 7 Hora Recargo Nocturno Dominical y Festivos 110.00
+    {
+        'codigo': '7',
+        'tipo': 'Hora Recargo Nocturno Dominical y Festivos',
+        'porcentaje': 110.00
+    },
+]
+
+# 5.5.6 Tipo de Incapacidad
+
+Tipo = [
+    {
+        'codigo': '1',
+        'descripcion': 'Comun',
+    },
+    {
+        'codigo': '2',
+        'descripcion': 'Profesional',
+    },
+    {
+        'codigo': '3',
+        'descripcion': 'Laboral'
+    },
+]
+
+# 5.5.7 Tipo de XML
+
+TipoXML = [
+    {
+        'codigo': '102',
+        'nombre': 'NominaIndividual',
+        'descripcion': 'Documento Soporte de Pago de Nómina Electrónica',
+    },
+    {
+        'codigo': '103',
+        'nombre': 'NominaIndividualDeAjuste',
+        'descripcion': 'Nota de Ajuste de Documento Soporte de Pago de Nómina Electrónica',
+    },
+]
+
+# 5.5.8 Tipo de Nota de Ajuste
+
+TipoNota = [
+    {
+        'codigo': '1',
+        'descripcion': 'Reemplazar'
+    },
+    {
+        'codigo': '2',
+        'descripcion': 'Eliminar',
+    },
+]

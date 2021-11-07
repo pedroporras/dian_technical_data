@@ -96,3 +96,13 @@ PeriodoNomina = {
   '5': '5 - Mensual',
   '6': '6 - Otro',
 }
+
+# 5.5.2 Tipo de contrato
+
+TipoContrato = {
+  '1': '1 - Termino fijo',
+  '2': '2 - Termino Indefinido',
+  '3': '3 - Obra o Labor',
+  '4': '4 - Aprendizaje',
+  '5': '5 - Practicas o Pasantias',
+}

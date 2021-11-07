@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import codecs
 import os
 
-VERSION = '0.1.4'
+VERSION = '0.1.4.1'
 DESCRIPTION = 'Modulo con definiciones de la DIAN'
 
 PACKAGE_NAME = "docedian"

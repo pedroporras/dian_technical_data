@@ -127,3 +127,63 @@ TipoTrabajador = {
     '56': '56 Pre pensionado con aporte voluntario a salud',
     '58': '58 Estudiantes de prácticas laborales en el sector público',
 }
+
+# 5.5.4 Subtipo de Trabajador
+
+SubTipoTrabajador = {
+   '00': 'No Aplica',
+   '01': 'Dependiente pensionado por vejez activo',
+}
+
+# 5.5.5 Tipo de Hora Extra o Recargo
+
+Porcentaje = [
+    # 1 Hora Extra Diurna 25.00
+    {
+        'codigo': '1',
+        'tipo': 'Hora Extra Diurna',
+        'porcentaje': 25.00
+    },
+
+    # 2 Hora Extra Nocturna 75.00
+    {
+        'codigo': '2',
+        'tipo': 'Hora Extra Nocturna',
+        'porcentaje': 75.00
+    },
+
+    # 3 Hora Recargo Nocturno 35.00
+    {
+        'codigo': '3',
+        'tipo': 'Hora Recargo Nocturno',
+        'porcentaje': 35.00
+    },
+
+    # 4 Hora Extra Diurna Dominical y Festivos 100.00
+    {
+        'codigo': '4',
+        'tipo': 'Hora Extra Diurna Dominical y Festivos',
+        'porcentaje': 100.00
+    },
+
+    # 5 Hora Recargo Diurno Dominical y Festivos 75.00
+    {
+        'codigo': '5',
+        'tipo': 'Hora Recargo Diurno Dominical y Festivos',
+        'porcentaje': 75.00
+    },
+
+    # 6 Hora Extra Nocturna Dominical y Festivos 150.00
+    {
+        'codigo': '6',
+        'tipo': 'Hora Extra Nocturna Dominical y Festivos',
+        'porcentaje': 150.00
+    },
+
+    # 7 Hora Recargo Nocturno Dominical y Festivos 110.00
+    {
+        'codigo': '7',
+        'tipo': 'Hora Recargo Nocturno Dominical y Festivos',
+        'porcentaje': 110.00
+    },
+]

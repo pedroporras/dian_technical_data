@@ -85,26 +85,11 @@ PaymentMeansCode = {
 
 # 13.2.12. Ambiente de Destino del Documento: cbc:ProfileExecutionID y cbc:UUID/@schemeID 
 # Código de Ambiente
-ProfileExecutionID = {
-    '1': '1 - Produccion',
-    '2': '2 - Pruebas',
-}
+
 
 # 13.2.13. Documento de identificación (Tipo de Identificador Fiscal): @schemeName
 # Código de Identificador Fiscal
-IdentifierType = {
-    '11': '11 - Registro civil',
-    '12': '12 - Tarjeta de identidad',
-    '13': '13 - Cédula de ciudadanía',
-    '21': '21 - Tarjeta de extranjería',
-    '22': '22 - Cédula de extranjería',
-    '31': '31 - NIT',
-    '41': '41 - Pasaporte',
-    '42': '42 - Documento de identificación extranjero',
-    '47': '47 - PEP',
-    '50': '50 - NIT de otro país',
-    '91': '91 - NUIP * ',
-}
+
 
 
 # 13.2.14. Tipo de organización jurídica (Personas): cbc:AdditionalAccountID 

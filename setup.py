@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import codecs
 import os
 
-VERSION = '0.1.3'
+VERSION = '0.1.0'
 DESCRIPTION = 'Modulo con definiciones de la DIAN'
 LONG_DESCRIPTION = 'Paquete de python para manejar la informacion de los anexos tecnicos de la DIAN en Colombia'
 

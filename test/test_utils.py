@@ -1,5 +1,5 @@
 import unittest
-from Docedian import utils
+from docedian import utils
 
 class TestUtilsMethods(unittest.TestCase):
 

@@ -219,3 +219,16 @@ TipoXML = [
         'descripcion': 'Nota de Ajuste de Documento Soporte de Pago de Nómina Electrónica',
     },
 ]
+
+# 5.5.8 Tipo de Nota de Ajuste
+
+TipoNota = [
+    {
+        'codigo': '1',
+        'descripcion': 'Reemplazar'
+    },
+    {
+        'codigo': '2',
+        'descripcion': 'Eliminar',
+    },
+]

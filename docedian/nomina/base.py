@@ -204,3 +204,18 @@ Tipo = [
         'descripcion': 'Laboral'
     },
 ]
+
+# 5.5.7 Tipo de XML
+
+TipoXML = [
+    {
+        'codigo': '102',
+        'nombre': 'NominaIndividual',
+        'descripcion': 'Documento Soporte de Pago de Nómina Electrónica',
+    },
+    {
+        'codigo': '103',
+        'nombre': 'NominaIndividualDeAjuste',
+        'descripcion': 'Nota de Ajuste de Documento Soporte de Pago de Nómina Electrónica',
+    },
+]

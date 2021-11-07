@@ -16,7 +16,7 @@ setup(
     description=DESCRIPTION,
     long_description_content_type='text/markdown',
     long_description=long_description,
-    url='',
+    url='https://github.com/pedroporras/dian_technical_data',
     author='Pedro Porras',
     author_email='<pedroporras@inexpresivo.com>',
     keywords=['DIAN', 'Colombia'],

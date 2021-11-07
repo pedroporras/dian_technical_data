@@ -86,5 +86,13 @@ MedioPago = {
     "39": "39 Crédito Negocio Intercambio Corporativo (CTX) ZZZ Acuerdo mutuo",
 }
 
+# 5.5.1 Periodo de Nomina
 
-
+PeriodoNomina = {
+  '1': '1 - Semanal',
+  '2': '2 - Decenal',
+  '3': '3- Catorcenal',
+  '4': '4 - Quincenal',
+  '5': '5 - Mensual',
+  '6': '6 - Otro',
+}

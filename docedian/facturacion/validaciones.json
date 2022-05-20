@@ -1,0 +1,142 @@
+[
+    {
+        "ID": "90",
+        "Y": "R",
+        "Elemento": "",
+        "Regla": "Solo se podrá transmitir una única vez el número del documento para el contribuyente",
+        "Mensaje": "Documento procesado anteriormente",
+        "V": "1.0",
+        "Xpath": "",
+        "Type": "8.1 Reglas y Mensajes de Validación"
+    },
+    {
+        "ID": "CTG01",
+        "Y": "R",
+        "Elemento": "",
+        "Regla": "Ocurre cuando el documento electrónico (Invoice) enviado por inconvenientes tecnológicos por parte de la DIAN no corresponde a un período de contingencia establecido por la misma. La hora y fecha de firmado del documento electrónico debe corresponder al periodo de contingencia establecido por la DIAN.",
+        "Mensaje": "La fecha y hora de firmado del documento no corresponde a un período de contingencia establecido por la DIAN",
+        "V": "1.0",
+        "Xpath": "",
+        "Type": "8.1 Reglas y Mensajes de Validación"
+    },
+    {
+        "ID": "VLR01",
+        "Y": "R",
+        "Elemento": "",
+        "Regla": "Los valores monetarios/porcentajes deben corresponder a validares positivos",
+        "Mensaje": "Los valores monetarios/porcentajes deben corresponder a valores Positivos",
+        "V": "1.0",
+        "Xpath": "",
+        "Type": "8.1 Reglas y Mensajes de Validación"
+    },
+    {
+        "ID": "CDG01",
+        "Y": "R",
+        "Elemento": "",
+        "Regla": "Códigos de departamento y municipios",
+        "Mensaje": "El código del departamento no coincide con el del municipio",
+        "V": "1.0",
+        "Xpath": "['//cbc:ID','//cbc:CountrySubentityCode']",
+        "Type": "8.1 Reglas y Mensajes de Validación"
+    },
+    {
+        "ID": "RUT01",
+        "Y": "R",
+        "Elemento": "",
+        "Regla": "Estado del Facturador electrónico y del Proveedor tecnólogico en el RUT",
+        "Mensaje": "El facturador electrónico y/o proveedor tecnólogico tiene el RUT en estado cancelado, suspendido o inactivo",
+        "V": "1.0",
+        "Xpath": "Todos los documentos electronicos",
+        "Type": "8.1 Reglas y Mensajes de Validación"
+    },
+    {
+        "ID": "FAA02",
+        "Y": "N",
+        "Elemento": "UBLExtensions",
+        "Regla": "Se requiere que para el documento factura (Invoice) existan declarados al menos dos nodos obligatorios //ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions y //ext:UBLExtension/ext:ExtensionContent/ds:Signature",
+        "Mensaje": "Las extensiones NO deben usarse para repetir información estandarizada en el UBL‐XML de la DIAN FE. Si se detectan malas prácticas en su uso la DIAN podrá limitar el número o las funcionalidades del grupo UBLExtensions",
+        "V": "1.0",
+        "Xpath": "/Invoice/ext:UBLExtensions",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB03",
+        "Y": "R",
+        "Elemento": "DianExtensions",
+        "Regla": "Solamente puede haber una ocurrencia de un grupo UBLExtension conteniendo el grupo sts:DianExtensions",
+        "Mensaje": "Más de un grupo UBLExtension conteniendo el grupo sts:DianExtensions",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB05a",
+        "Y": "R",
+        "Elemento": "InvoiceAuthorization",
+        "Regla": "Número de la autorización de la numeración que debe existir",
+        "Mensaje": "No se encuentra el número de autorización del rango de numeración otorgado",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceControl/sts:InvoiceAuthorization",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB05b",
+        "Y": "R",
+        "Elemento": "InvoiceAuthorization",
+        "Regla": "El número de la autorización de la numeración debe corresponder al número de información de este contribuyente emisor para este Proveedor de Autorización",
+        "Mensaje": "Número de la autorización de la numeración no corresponde a un número de autorización de este contribuyente emisor para este Proveedor de Autorización",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceControl/sts:InvoiceAuthorization",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB07a",
+        "Y": "R",
+        "Elemento": "StartDate",
+        "Regla": "Fecha de inicio de la información de autorización para la numeración debe ser anterior o igual a la fecha de la emisión de la factura (solamente para facturas)",
+        "Mensaje": "Fecha de emisión anterior a la fecha de inicio de la autorización de la numeración StartDate > IssueDate",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceControl/sts:AuthorizationPeriod/cbc:StartDate",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB07b",
+        "Y": "R",
+        "Elemento": "StartDate",
+        "Regla": "Fecha inicial del rango de numeración informado corresponde a la fecha inicial de los rangos vigente para el contribuyente.",
+        "Mensaje": "Fecha inicial del rango de numeración informado NO corresponde a la fecha inicial de los rangos vigente para el contribuyente",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceControl/sts:AuthorizationPeriod/cbc:StartDate",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB08a",
+        "Y": "R",
+        "Elemento": "EndDate",
+        "Regla": "Fecha final de la autorización para la numeración debe ser posterior o igual a la fecha de la emisión de la factura (solamente para facturas)",
+        "Mensaje": "Fecha de emisión posterior a la fecha final de la autorización de numeración EndDate < IssueDate",
+        "V": "1.0",
+        "Xpath": "/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceControl/sts:AuthorizationPeriod/cbc:EndDate",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB08b",
+        "Y": "R",
+        "Elemento": "EndDate",
+        "Regla": "Fecha final del rango de numeración informado corresponde a la fecha final de los rangos vigente para el contribuyente",
+        "Mensaje": "Fecha final del rango de numeración informado no corresponde a la fecha final de los rangos vigente para el contribuyente",
+        "V": "1.0",
+        "Xpath": "/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceControl/sts:AuthorizationPeriod/cbc:EndDate",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB10a",
+        "Y": "R",
+        "Elemento": "Prefix",
+        "Regla": "Si Prefix existe entonces debe ser igual al código de la sucursal  /Invoice/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceControl/sts:AuthorizedInvoices/sts:Prefix =/Invoice/cac:AccountingSupplierParty/cac:Party/cac:PartyLegalEntity/cac:CorporateRegistrationScheme/cbc:ID",
+        "Mensaje": "No es igual al código de la sucursal correspondiente a este punto defacturación",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceControl/sts:AuthorizedInvoices/sts:Prefix",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    }
+]

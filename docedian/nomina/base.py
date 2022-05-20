@@ -1,3 +1,5 @@
+from enum import Enum
+
 # 5.3.3.1 Formas de pago
 
 FormaPago = [
@@ -557,3 +559,56 @@ TipoNota = [
         'descripcion': 'Eliminar',
     },
 ]
+
+class Campos(Enum):
+
+DiasTrabajados
+SueldoTrabajado
+AuxilioTransporte
+ViaticoManuAlojS	
+ViaticoManuAlojNS
+HED
+HEN
+HRN
+HEDDF
+HRDDF
+HENDF
+HRNDF
+VacacionesComunes
+VacacionesCompensadas
+# Primas
+Cantidad
+Pago
+PagoNS
+# Cesantias
+
+
+    AFC = 'AFC'
+    AUXILIOTRANSPORTE = 'AUXILIOTRANSPORTE'
+    AuxilioNS = 'AuxilioNS'
+    BonificacionS = 'BonificacionS'
+    Comisiones = 'Comisiones'
+    ConceptoNS = 'ConceptoNS'
+    ConceptoS = 'ConceptoS'
+    DEDUCCIONES = 'DEDUCCIONES'
+    DEVENGADO = 'DEVENGADO'
+    DeduccionSP = 'DeduccionSP'
+    Deuda = 'Deuda'
+    EMBARGOSJUDICIALES = 'EMBARGOSJUDICIALES'
+    Incapacidades = 'Incapacidades'
+    Indemnizacion = 'Indemnizacion'
+    Libranzas = 'Libranzas'
+    LicenciaMP = 'LicenciaMP'
+    NETO = 'NETO'
+    OtrasDeducciones = 'OtrasDeducciones'
+    OtrosDeducciones = 'OtrosDeducciones'
+    PAGOCESANTIAS = 'PAGOCESANTIAS'
+    PAGOINTERESESCESANTIAS = 'PAGOINTERESESCESANTIAS'
+    PAGOPRIMASERVICIOS = 'PAGOPRIMASERVICIOS'
+    PENSIONEMPLEADO = 'PENSIONEMPLEADO'
+    PensionVoluntaria = 'PensionVoluntaria'
+    Retencion = 'Retencion'
+    SALARIOBASICO = 'SALARIOBASICO'
+    SALUDEMPLEADO = 'SALUDEMPLEADO'
+    VacacionesCompensadas = 'VacacionesCompensadas'
+    VacacionesComunes = 'VacacionesComunes'

@@ -138,5 +138,215 @@
         "V": "1.0",
         "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceControl/sts:AuthorizedInvoices/sts:Prefix",
         "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB10b",
+        "Y": "R",
+        "Elemento": "Prefix",
+        "Regla": "Debe corresponder al prefijo de la autorización de numeración",
+        "Mensaje": "El prefijo no corresponder al prefijo de la autorización de numeración",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceControl/sts:AuthorizedInvoices/sts:Prefix",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB11a",
+        "Y": "R",
+        "Elemento": "From",
+        "Regla": "Valor inicial del rango de numeración debe estar informado",
+        "Mensaje": "Valor inicial del rango de no está informado",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceControl/sts:AuthorizedInvoices/sts:From",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB11b",
+        "Y": "R",
+        "Elemento": "From",
+        "Regla": "Valor inicial del rango de numeración informado debe corresponder al valor inicial de los rangos vigentes para el contribuyente emisor si From no corresponde al inicio de un rango autorizado en el sistema de numeración para el emisor de la FE",
+        "Mensaje": "Valor inicial del rango de numeración informado no corresponde a un valor inicial de los rangos vigentes para el contribuyente emisor",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceControl/sts:AuthorizedInvoices/sts:From",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB12a",
+        "Y": "R",
+        "Elemento": "To",
+        "Regla": "Valor final del rango de numeración debe estar informado",
+        "Mensaje": "Valor final del rango de no está informado",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceControl/sts:AuthorizedInvoices/sts:To",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB12b",
+        "Y": "R",
+        "Elemento": "To",
+        "Regla": "Valor final del rango de numeración informado debe corresponder al valor final de los rangos vigentes para el contribuyente emisor Si elemento To no corresponde al final de un rango autorizado en el Sistema de numeración para el emisor de la FE",
+        "Mensaje": "Valor final del rango de numeración informado no corresponde a un valor final de los rangos vigentes para el contribuyente emisor",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceControl/sts:AuthorizedInvoices/sts:To",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB14",
+        "Y": "N",
+        "Elemento": "IdentificationCode",
+        "Regla": "Debe ser informado el literal “CO",
+        "Mensaje": "No está informado el literal “CO",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceSource/cbc:IdentificationCode",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB15",
+        "Y": "N",
+        "Elemento": "listAgencyID",
+        "Regla": "Debe ser informado el literal \"6\"",
+        "Mensaje": "No está informado el literal \"6\"",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceSource/cbc:IdentificationCode/@listAgencyID",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB16",
+        "Y": "N",
+        "Elemento": "listAgencyName",
+        "Regla": "Debe ser informado el literal \"United Nations Economic Commission for Europe\"",
+        "Mensaje": "No informado el literal \"United Nations Economic Commission forEurope\"",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceSource/cbc:IdentificationCode/@listAgencyName",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB17",
+        "Y": "N",
+        "Elemento": "listSchemeURI",
+        "Regla": "Debe ser informado el literal \"urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.1\"",
+        "Mensaje": "No informado el literal \"urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.1\"",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:InvoiceSource/cbc:IdentificationCode/@listSchemeURI",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB19a",
+        "Y": "R",
+        "Elemento": "ProviderID",
+        "Regla": "NIT del Prestador de Servicios debeestar informado",
+        "Mensaje": "NIT del Prestador de Servicio no fue informado",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:SoftwareProvider/sts:ProviderID",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB19b",
+        "Y": "R",
+        "Elemento": "@schemeID",
+        "Regla": "DV del NIT del Proveedor Tecnológico debe ser informado",
+        "Mensaje": "Fue informado que Prestador de Servicios está identificado por NIT y el DV no fue informado en el atributo @schemeID",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:SoftwareProvider/sts:ProviderID/@schemeID",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB22b",
+        "Y": "R",
+        "Elemento": "@schemeID",
+        "Regla": "DV del NIT del Prestador de Servicios",
+        "Mensaje": "DV del NIT del Prestador de Servicios no está correctamente calculado",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:SoftwareProvider/sts:ProviderID/@schemeID",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB23",
+        "Y": "R",
+        "Elemento": "@schemeName",
+        "Regla": "Tipo de identificador fiscal de la persona debe corresponder a un valor codificado",
+        "Mensaje": "Identificador del tipo de documento de identidad no es igual a 31",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:SoftwareProvider/sts:ProviderID/@schemeName",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB24a",
+        "Y": "R",
+        "Elemento": "softwareID",
+        "Regla": "Valida que se encuentre el Identificador del software habilitado para la emisión de facturas",
+        "Mensaje": "No se encuentra informado el código de software",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:SoftwareProvider/sts:softwareID",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB24b",
+        "Y": "R",
+        "Elemento": "softwareID",
+        "Regla": "Identificador del software asignado cuando el software se activa en el Sistema de Facturación Electrónica debe corresponder a un software autorizado para este OFE.",
+        "Mensaje": "Identificador del software asignado cuando el software se activa en el Sistema de Facturación Electrónica no corresponde a un software autorizado para este OFE",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:SoftwareProvider/sts:softwareID",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB24c",
+        "Y": "R",
+        "Elemento": "softwareID",
+        "Regla": "Identificador del software asignado cuando el software se activa en el Sistema de Facturación Electrónica debe estar activo  ",
+        "Mensaje": "Identificador del software informado se encuentra inactivo",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:SoftwareProvider/sts:softwareID",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB25",
+        "Y": "N",
+        "Elemento": "@schemeAgencyID",
+        "Regla": "Debe ser informado el literal \"195\"",
+        "Mensaje": "No informado el literal \"195\"",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:SoftwareProvider/sts:softwareID/@ schemeAgencyID",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB26",
+        "Y": "N",
+        "Elemento": "@schemeAgencyName",
+        "Regla": "Debe ser informado el literal \"CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)\"",
+        "Mensaje": "No informado el literal \"CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)\"",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:SoftwareProvider/sts:softwareID/@schemeAgencyName",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB27a",
+        "Y": "R",
+        "Elemento": "SoftwareSecurityCode",
+        "Regla": "Valida que se informe el código de seguridad del software",
+        "Mensaje": "No se encuentra el código de seguridad del software",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:SoftwareSecurityCode",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB27b",
+        "Y": "R",
+        "Elemento": "SoftwareSecurityCode",
+        "Regla": "Huella del software que autorizó la DIAN al Obligado a Facturar Electrónicamente o al Proveedor Tecnológico",
+        "Mensaje": "Huella no corresponde a un software autorizado para este OFE",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:SoftwareSecurityCode",
+        "Type": "8.2. Factura Electrónica: Invoice"
+    },
+    {
+        "ID": "FAB28",
+        "Y": "N",
+        "Elemento": "@schemeAgencyID",
+        "Regla": "Debe ser informado el literal \"195\"",
+        "Mensaje": "No informado el literal \"195\"",
+        "V": "1.0",
+        "Xpath": "//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/sts:DianExtensions/sts:SoftwareSecurityCode/@schemeAgencyID",
+        "Type": "8.2. Factura Electrónica: Invoice"
     }
 ]

@@ -1,16 +1,81 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
+from typing import Dict, List, Optional, Union
+from datetime import datetime
+from enum import Enum
+from pydantic import BaseModel, Field, validator
+
+
+
+class DocumentBuilder(ABC):
+    """
+    Declara la interfaz para crear los documentos.
+    """
+
+    def __init__(self) -> None:
+        self._document = None
+
+    @abstractmethod
+    def build_document(self, data: Dict) -> None:
+        """
+        Construye el documento. Este metodo debe recibir como parametro el documento en formato Dict.
+        """
+        pass
+
+
+class InvoiceBuilder(DocumentBuilder):
+    """
+    Construye un objeto Invoice usando la interfaz DocumentBuilder.
+    NOTE: Esta clase se instancia en el modulo de la aplicacion que se encarga de construir los documentos. este construye la factura con la informacion base
+    """
+
+    def __init__(self) -> None:
+        super().__init__()
+
+
+    @property
+    def document(self) -> Invoice:
+        document = self._invoice
+        self.reset()
+        return document
+
+    def build_document(self, data: Dict) -> None:
+        """
+        Construye el documento. Este metodo debe recibir como parametro el documento en formato Dict.
+        """
+        return Invoice(**data)
+
+class InvoiceHeader(BaseModel):
+    """
+    Clase que va a representar el esquema de los datos de la cabecera de la factura.
+    """
+    document: str = Field(...)
+    document_name: str = Field(...)
+    prefix: str = Field(...)
+    number: str = Field(...)
+    date: datetime = Field(...)
+    currency: str = Field(...)
+    exchange_rate: Optional[float] = Field(None)
+
+class InvoiceLine(BaseModel):
+    """
+    Clase que va a representar el esquema de los datos de la linea de la factura.
+    """
+    quantity: float = Field(...)
+    price: float = Field(...)
+    discount: float = Field(...)
+    subtotal: float = Field(...)
+    total: float = Field(...)
 
 
 class Document(ABC):
     """
-    Declara la interfaz de los documentos.
     """
-
+    
     @abstractmethod
     def get_document(self) -> str:
         """
-        Retorna el documento en formato XML
+        NOTE: Retorna el documento en formato XML
         """
         pass
 
@@ -21,317 +86,35 @@ class Document(ABC):
         """
         pass
 
-    @abstractmethod
-    def get_document_type(self) -> str:
-        """
-        Retorna el tipo de documento
-        """
-        pass
-
-    @abstractmethod
-    def get_document_version(self) -> str:
-        """
-        Retorna la version del documento
-        """
-        pass
-
-    @abstractmethod
-    def get_document_schema(self) -> str:
-        """
-        Retorna el esquema del documento
-        """
-        pass
-
-    @abstractmethod
-    def get_document_schema_version(self) -> str:
-        """
-        Retorna la version del esquema del documento
-        """
-        pass
-
-    @abstractmethod
-    def get_document_schema_location(self) -> str:
-        """
-        Retorna la ubicacion del esquema del documento
-        """
-        pass
-
-    @abstractmethod
-    def get_document_signature(self) -> str:
-        """
-        Retorna la firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def get_document_signature_version(self) -> str:
-        """
-        Retorna la version de la firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def get_document_signature_schema(self) -> str:
-        """
-        Retorna el esquema de la firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def get_document_signature_schema_version(self) -> str:
-        """
-        Retorna la version del esquema de la firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def get_document_signature_method(self) -> str:
-        """
-        Retorna el metodo de firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def get_document_signature_method_version(self) -> str:
-        """
-        Retorna la version del metodo de firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def get_document_signature_method_schema(self) -> str:
-        """
-        Retorna el esquema del metodo de firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def get_document_signature_method_transform(self) -> str:
-        """
-        Retorna la transformacion del metodo de firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def get_document_signature_method_transform_version(self) -> str:
-        """
-        Retorna la version de la transformacion del metodo de firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def get_document_signature_method_transform_schema(self) -> str:
-        """
-        Retorna el esquema de la transformacion del metodo de firma del documento
-        """
-        pass
-
-
-class DocumentBuilder(ABC):
+class Invoice(Document, BaseModel):
     """
-    Declara la interfaz para crear los documentos.
+    Clase que representa un documento de tipo Invoice.
     """
+    # Creo que va a ser mas facil si se divide tambien por secciones a alto nivel
+    # Cabecera
+    # PagosFactura
+    # Observaciones
+    # AdquirienteFactura
+    # ImpuestosFactura
+    # DetalleFactura
+    # ResumenImpuestosFactura
+    # TotalesFactura
+    header: InvoiceHeader = Field(...)
+    lines: List[InvoiceLine] = Field(...)
 
-    @abstractmethod
-    def build_document(self) -> None:
+
+    def get_document(self) -> str:
         """
-        Construye el documento
+        Retorna el documento en formato XML
         """
-        pass
+        return self.data.get('document')
 
-    @abstractmethod
-    def build_document_name(self) -> None:
+    def get_document_name(self) -> str:
         """
-        Construye el nombre del documento
+        Retorna el nombre del documento
         """
-        pass
+        return self._data.get('document_name')
 
-    @abstractmethod
-    def build_document_type(self) -> None:
-        """
-        Construye el tipo de documento
-        """
-        pass
-
-    @abstractmethod
-    def build_document_version(self) -> None:
-        """
-        Construye la version del documento
-        """
-        pass
-
-    @abstractmethod
-    def build_document_schema(self) -> None:
-        """
-        Construye el esquema del documento
-        """
-        pass
-
-    @abstractmethod
-    def build_document_schema_version(self) -> None:
-        """
-        Construye la version del esquema del documento
-        """
-        pass
-
-    @abstractmethod
-    def build_document_schema_location(self) -> None:
-        """
-        Construye la ubicacion del esquema del documento
-        """
-        pass
-
-    @abstractmethod
-    def build_document_signature(self) -> None:
-        """
-        Construye la firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def build_document_signature_version(self) -> None:
-        """
-        Construye la version de la firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def build_document_signature_schema(self) -> None:
-        """
-        Construye el esquema de la firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def build_document_signature_schema_version(self) -> None:
-        """
-        Construye la version del esquema de la firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def build_document_signature_method(self) -> None:
-        """
-        Construye el metodo de firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def build_document_signature_method_version(self) -> None:
-        """
-        Construye la version del metodo de firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def build_document_signature_method_schema(self) -> None:
-        """
-        Construye el esquema del metodo de firma del documento
-        """
-        pass
-
-    @abstractmethod
-    def build_document_signature_method_transform(self) -> None:
-        """
-        Construye la transformacion del metodo de firma del documento
-        """
-        pass
-
-
-class DocumentDirector():
-    """
-    Construye un objeto Document usando la interfaz DocumentBuilder.
-    """
-
-    def __init__(self, builder: DocumentBuilder) -> None:
-        self._builder = builder
-
-    def construct_document(self) -> None:
-        self._builder.build_document()
-        self._builder.build_document_name()
-        self._builder.build_document_type()
-        self._builder.build_document_version()
-        self._builder.build_document_schema()
-        self._builder.build_document_schema_version()
-        self._builder.build_document_schema_location()
-        self._builder.build_document_signature()
-        self._builder.build_document_signature_version()
-        self._builder.build_document_signature_schema()
-        self._builder.build_document_signature_schema_version()
-        self._builder.build_document_signature_method()
-        self._builder.build_document_signature_method_version()
-        self._builder.build_document_signature_method_schema()
-        self._builder.build_document_signature_method_transform()
-
-    @property
-    def document(self) -> Document:
-        return self._builder.document
-    
-
-class InvoiceBuilder(DocumentBuilder):
-    """
-    Construye un objeto Invoice usando la interfaz DocumentBuilder.
-    """
-
-    def __init__(self) -> None:
-        self.reset()
-
-    def reset(self) -> None:
-        self._invoice = Invoice()
-
-    @property
-    def document(self) -> Invoice:
-        document = self._invoice
-        self.reset()
-        return document
-
-    def build_document(self) -> None:
-        self._invoice.document = 'Invoice'
-
-    def build_document_name(self) -> None:
-        self._invoice.document_name = 'Factura'
-
-    def build_document_type(self) -> None:
-        self._invoice.document_type = '01'
-
-    def build_document_version(self) -> None:
-        self._invoice.document_version = '1.0.0'
-
-    def build_document_schema(self) -> None:
-        self._invoice.document_schema = 'https://www.dian.gov.co/contratos/facturaelectronica/v1/Schema'
-
-    def build_document_schema_version(self) -> None:
-        self._invoice.document_schema_version = '1.0'
-
-    def build_document_schema_location(self) -> None:
-        self._invoice.document_schema_location = 'https://www.dian.gov.co/contratos/facturaelectronica/v1/Schema/facturaElectronica.xsd'
-
-    def build_document_signature(self) -> None:
-        self._invoice.document_signature = 'Signature'
-
-    def build_document_signature_version(self) -> None:
-        self._invoice.document_signature_version = '1.0.0'
-
-    def build_document_signature_schema(self) -> None:
-        self._invoice.document_signature_schema = 'http://www.w3.org/2000/09/xmldsig#'
-
-    def build_document_signature_schema_version(self) -> None:
-        self._invoice.document_signature_schema_version = '1.0'
-
-    def build_document_signature_method(self) -> None:
-        self._invoice.document_signature_method = 'SignatureMethod'
-
-    def build_document_signature_method_version(self) -> None:
-        self._invoice.document_signature_method_version = '1.0.0'
-
-    def build_document_signature_method_schema(self) -> None:
-        self._invoice.document_signature_method_schema = 'http://www.w3.org/2000/09/xmldsig#rsa-sha1'
-
-    def build_document_signature_method_transform(self) -> None:
-        self._invoice.document_signature_method_transform = 'Transform'
-
-    def build_document_signature_method_transform_version(self) -> None:
-        self._invoice.document_signature_method_transform_version = '1.0.0'
 
 
 class CreditNoteBuilder(DocumentBuilder):
@@ -689,3 +472,51 @@ class Dianbase():
             result = 0
 
         return result
+    
+# class InvoiceSchema(BaseModel):
+#     """
+#     Clase que representa el esquema de la factura.
+#     """
+
+#     document: str = Field(...)
+#     document_name: str = Field(...)
+#     document_type: str = Field(...)
+#     document_version: str = Field(...)
+#     document_schema: str = Field(...)
+#     document_schema_version: str = Field(...)
+#     document_schema_location: str = Field(...)
+#     document_signature: str = Field(...)
+#     document_signature_version: str = Field(...)
+#     document_signature_schema: str = Field(...)
+#     document_signature_method: str = Field(...)
+#     document_signature_method_version: str = Field(...)
+#     document_signature_method_schema: str = Field(...)
+#     document_signature_method_transform: str = Field(...)
+#     document_signature_method_transform_version: str = Field(...)
+#     document_signature_method_transform_schema: str = Field(...)
+
+#     class Config:
+#         """
+#         Configuracion del esquema de la factura.
+#         """
+
+#         schema_extra = {
+#             "example": {
+#                 "document": "XML",
+#                 "document_name": "invoice",
+#                 "document_type": "invoice",
+#                 "document_version": "1.0",
+#                 "document_schema": "invoice.xsd",
+#                 "document_schema_version": "1.0",
+#                 "document_schema_location": "http://www.example.com/invoice.xsd",
+#                 "document_signature": "XML",
+#                 "document_signature_version": "1.0",
+#                 "document_signature_schema": "invoice.xsd",
+#                 "document_signature_method": "XML",
+#                 "document_signature_method_version": "1.0",
+#                 "document_signature_method_schema": "invoice.xsd",
+#                 "document_signature_method_transform": "XML",
+#                 "document_signature_method_transform_version": "1.0",
+#                 "document_signature_method_transform_schema": "invoice.xsd"
+#             }
+#         }
